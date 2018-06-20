@@ -20,74 +20,82 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         oneButton = (Button) findViewById(R.id.oneButton);
         twoButton = (Button) findViewById(R.id.twoButton);
+        threeButton = (Button) findViewById(R.id.threeButton);
+        fourButton = (Button) findViewById(R.id.fourButton);
+        fiveButton = (Button) findViewById(R.id.fiveButton);
+        sixButton = (Button) findViewById(R.id.sixButton);
+        sevenButton = (Button) findViewById(R.id.sevenButton);
+        eightButton = (Button) findViewById(R.id.eightButton);
+        nineButton = (Button) findViewById(R.id.nineButton);
         crunchifyEditText = (EditText) findViewById(R.id.editText);
+        addAValue();
 
+    }
 
-        oneButton.setOnClickListener(new View.OnClickListener() {
+    protected void addAValue() {
+        oneButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "1");
             }
         });
 
-        twoButton.setOnClickListener(new View.OnClickListener() {
+        twoButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "2");
             }
         });
 
-        threeButton.setOnClickListener(new View.OnClickListener() {
+        threeButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "3");
             }
         });
 
-        fourButton.setOnClickListener(new View.OnClickListener() {
+        fourButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "4");
             }
         });
 
-        fiveButton.setOnClickListener(new View.OnClickListener() {
+        fiveButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "5");
             }
         });
 
-        sixButton.setOnClickListener(new View.OnClickListener() {
+        sixButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "6");
             }
         });
 
-        sevenButton.setOnClickListener(new View.OnClickListener() {
+        sevenButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "7");
             }
         });
 
-        eightButton.setOnClickListener(new View.OnClickListener() {
+        eightButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "8");
             }
         });
 
-        nineButton.setOnClickListener(new View.OnClickListener() {
+        nineButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "9");
             }
         });
     }
-
-
 
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
