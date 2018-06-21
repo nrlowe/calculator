@@ -10,8 +10,9 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
     Button oneButton, twoButton, threeButton, fourButton, fiveButton, sixButton, sevenButton,
-            eightButton, nineButton;
+            eightButton, nineButton, addButton;
     EditText crunchifyEditText;
+    float valueOne, valueTwo;
 
 
     @Override
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         sevenButton = (Button) findViewById(R.id.sevenButton);
         eightButton = (Button) findViewById(R.id.eightButton);
         nineButton = (Button) findViewById(R.id.nineButton);
+        addButton = (Button) findViewById(R.id.addButton);
         crunchifyEditText = (EditText) findViewById(R.id.editText);
         addAValue();
 
@@ -95,6 +97,16 @@ public class MainActivity extends AppCompatActivity {
                 crunchifyEditText.setText(crunchifyEditText.getText() + "9");
             }
         });
+
+        addButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                valueOne = Float.parseFloat(crunchifyEditText.getText() + "");
+                crunchifyEditText.equals(null);
+            }
+        });
+
+
     }
 
     public void sendMessage(View view) {
