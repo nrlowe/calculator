@@ -15,7 +15,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/edit_message"
-        android:inputType="textPersonName"
+        android:inputType="none|textPersonName|number"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

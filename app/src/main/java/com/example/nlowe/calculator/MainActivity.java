@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         crunchifyEditText = (EditText) findViewById(R.id.editText);
         addAValue();
 
+
     }
 
     protected void addAValue() {
@@ -102,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 valueOne = Float.parseFloat(crunchifyEditText.getText() + "");
-                crunchifyEditText.equals(null);
+                crunchifyEditText.equals("");
             }
         });
 
