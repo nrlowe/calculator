@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 valueOne = Float.parseFloat(crunchifyEditText.getText() + "");
-                crunchifyEditText.equals("");
+                crunchifyEditText.getText().clear();
             }
         });
 
