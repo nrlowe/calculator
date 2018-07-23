@@ -7,12 +7,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
     Button oneButton, twoButton, threeButton, fourButton, fiveButton, sixButton, sevenButton,
-            eightButton, nineButton, addButton;
+            eightButton, nineButton, addButton, equalButton;
     EditText crunchifyEditText;
-    float valueOne, valueTwo;
+    float value;
+    float returnValue = 0f;
+
+
 
 
     @Override
@@ -29,8 +34,10 @@ public class MainActivity extends AppCompatActivity {
         eightButton = (Button) findViewById(R.id.eightButton);
         nineButton = (Button) findViewById(R.id.nineButton);
         addButton = (Button) findViewById(R.id.addButton);
+        equalButton = (Button) findViewById(R.id.equalButton);
         crunchifyEditText = (EditText) findViewById(R.id.editText);
         addAValue();
+
 
 
     }
@@ -102,10 +109,22 @@ public class MainActivity extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                valueOne = Float.parseFloat(crunchifyEditText.getText() + "");
+                value = Float.parseFloat(crunchifyEditText.getText() + "");
+                returnValue += value;
                 crunchifyEditText.getText().clear();
             }
         });
+
+        equalButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                String finalResult = String.valueOf(returnValue);
+                crunchifyEditText.setText(finalResult);
+            }
+
+        });
+
+
 
 
     }
